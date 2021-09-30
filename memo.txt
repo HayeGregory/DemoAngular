@@ -21,3 +21,7 @@ creer un composant a inclure dans un module existant :
     ng g c [nomComposant] -m [nomModuleExistant]
 
 ========================================================================
+composant home et about + navigation de base 
+- creer les composant dans un dossier components
+- app-routing.module.ts : ajouter le path vers home et about
+- 
