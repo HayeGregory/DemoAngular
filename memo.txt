@@ -24,4 +24,9 @@ creer un composant a inclure dans un module existant :
 composant home et about + navigation de base 
 - creer les composant dans un dossier components
 - app-routing.module.ts : ajouter le path vers home et about
-- 
+- app.component.html : liens href / routerLink + router-outlet
+
+possibilite architecture liens/sousliens (/home/about par ex)
+- modifier le path dans app-routing.module.ts en specifiant about children de home
+
+========================================================================

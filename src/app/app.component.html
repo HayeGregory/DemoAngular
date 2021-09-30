@@ -1,11 +1,10 @@
-<h4>observer la difference entre la navigation href et routerLink</h4>
-<p>Href</p>
-<a href="/home">Home</a><br />
-<a href="/about">About</a>
-
-<p>routerLink</p>
-<a routerLink="/home">Home</a><br />
-<a routerLink="/about">About</a>
+<h4>Liens / sous-lien</h4>
+<ul>
+  <li><a routerLink="/home">Home</a><br /></li>
+  <ul>
+    <li><a routerLink="/home/about">About</a></li>
+  </ul>
+</ul>
 
 <div>
   <router-outlet></router-outlet>
