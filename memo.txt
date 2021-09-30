@@ -45,3 +45,7 @@ liens secondaires au niveau du module enfant: demo-routing.module.ts
 - Definir les routes dans app-routing.module.ts avec un loadchildren import(chemin du module ).then m.Demomodule
 
 ========================================================================
+Binding one way , two way
+- pour l'utilisation des formulaire : FormsModule à importer dans le module concerné
+
+========================================================================
