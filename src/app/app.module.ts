@@ -5,18 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
+import { NavComponent } from './components/nav/nav.component';
+import { DemoRoutingModule } from './components/demo/demo-routing.module';
+import { ExoRoutingModule } from './components/exo/exo-routing.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    AboutComponent
-  ],
+  declarations: [AppComponent, HomeComponent, AboutComponent, NavComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DemoRoutingModule,
+    ExoRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

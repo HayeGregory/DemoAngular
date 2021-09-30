@@ -30,3 +30,18 @@ possibilite architecture liens/sousliens (/home/about par ex)
 - modifier le path dans app-routing.module.ts en specifiant about children de home
 
 ========================================================================
+navigation inter-module :
+cas : 
+liens principaux au niveau du module parent:  app-routing.module.ts
+liens secondaires au niveau du module enfant: demo-routing.module.ts
+- preparer un composant nav : html avec les routerlink, css
+- rajouter la structure html (header/nav/content) dans app.component.html
+- creer un module demo avec --routing
+- creer un composant à inclure dans le module demo
+- creer un composant demo01 dans demo
+- rajouter le router-outlet dans demo.components.html
+- definir les path dans le demo-routing.module.ts (avec un children)
+- dans app.module.ts definir l’import : demoRoutingModule
+- Definir les routes dans app-routing.module.ts avec un loadchildren import(chemin du module ).then m.Demomodule
+
+========================================================================
