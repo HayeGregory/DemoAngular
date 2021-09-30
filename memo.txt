@@ -1,0 +1,23 @@
+requirements :
+- installer nodeJS (version LTS) : npm -v, node -v pour check les versions
+- installer Angular : npm i -g @angular/cli , ng version pour check la version
+- installer VS code (extension : Angular schematics, Angular Snippets, Angular Language Service)
+    (extensions en plus : bracket pair colorizer, Material icon theme, prettier coe formatter)
+
+Creation du projet :
+- ng new [nomProjet] --skip-tests --routing
+(le mode strict sera a true : a changer dans le fichier tsconfig.json si necessaire)
+- repondre y pour Angular routing
+- choisir scss pour le template css
+- verifier que l'app tourne : ng serve --o [--port=42xx] 
+- navigateur  : localhost
+
+Commande ng : 
+creer un module (ajouter --routing pour inclure nom-routing.module.ts): 
+    ng g m [nomModule]
+creer un composant : 
+    ng g c [nomComposant]
+creer un composant a inclure dans un module existant : 
+    ng g c [nomComposant] -m [nomModuleExistant]
+
+========================================================================
