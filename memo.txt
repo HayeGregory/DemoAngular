@@ -49,3 +49,7 @@ Binding one way , two way
 - pour l'utilisation des formulaire : FormsModule à importer dans le module concerné
 
 ========================================================================
+Binding event
+- lier un event JS à une methode dans ts : (click)="maMethode()" 
+
+========================================================================
