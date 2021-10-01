@@ -9,6 +9,8 @@ import { NavComponent } from './components/nav/nav.component';
 import { DemoRoutingModule } from './components/demo/demo-routing.module';
 import { ExoRoutingModule } from './components/exo/exo-routing.module';
 import { FormsModule } from '@angular/forms';
+import { ToFahrenheitPipe } from './components/pipes/to-fahrenheit.pipe';
+import { TemperaturePipe } from './components/pipes/temperature.pipe';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, AboutComponent, NavComponent],

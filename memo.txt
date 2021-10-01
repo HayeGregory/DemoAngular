@@ -57,3 +57,13 @@ Attribute Binding
 - desactiver un bouton via une condition & une methode changeant une valeur
 - entourer un attribut html par exemple de [] afin de l'associer a une condition(html) (boolean dans ts)
 ========================================================================
+Pipe et custom pipes
+- creer un dossier pipes
+- creer un custom pipe : ng generate pipe [nom du pipe]
+    - premier param : sur quel propriete on va travailler (le type doit correspondre)
+    - dans args: unknown[] les params eventuels
+    - specifier le type de retour
+- creer un module shared : ng g m shared
+    - specifier la declaration et l'export du pipe 
+    - dans le module importer  le sharedModule
+    - attention si il peut detecter plusieurs modules et faire des imports auto sur app module alors qu'on veut l'utiliser dans demomodule

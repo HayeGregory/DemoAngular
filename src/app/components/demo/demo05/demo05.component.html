@@ -1,0 +1,23 @@
+<h4>Pipes</h4>
+
+<p>uppercase : {{ maVar1 | uppercase }}</p>
+<p>lowercase : {{ maVar1 | lowercase }}</p>
+<p>titlecase : {{ maVar1 | titlecase }}</p>
+
+<p>DecimalPipe : {{ maVar2 | number: "1.1-3" }}</p>
+
+<p>DatePipe (pattern) : {{ maVar3 | date: "dd-MM-YYYY" }}</p>
+<p>DatePipe (shorDate): {{ maVar3 | date: "shortDate" }}</p>
+<p>DatePipe (longDate): {{ maVar3 | date: "longDate" }}</p>
+<p>DatePipe (long) : {{ maVar3 | date: "long" }}</p>
+
+<h4>Custom Pipe</h4>
+<p>
+  Temperature en c° : {{ maVar4 }} || Temperature en fahrenheit :
+  {{ maVar4 | toFahrenheit }}
+</p>
+
+<h4>Custom pipe avec parametre ( temperature(unite c | f ))</h4>
+<p>valeur de base : {{ maVar4 }}</p>
+<p>Temperature en Celsius : {{ maVar4 | temperature: "c" }}</p>
+<p>Temperature en Fahrenheit : {{ maVar4 | temperature: "f" }}</p>

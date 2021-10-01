@@ -8,6 +8,8 @@ import { Demo02Component } from './demo02/demo02.component';
 import { Demo03Component } from './demo03/demo03.component';
 import { FormsModule } from '@angular/forms';
 import { Demo04Component } from './demo04/demo04.component';
+import { Demo05Component } from './demo05/demo05.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { Demo04Component } from './demo04/demo04.component';
     Demo02Component,
     Demo03Component,
     Demo04Component,
+    Demo05Component,
   ],
-  imports: [CommonModule, DemoRoutingModule, FormsModule],
+  imports: [CommonModule, DemoRoutingModule, FormsModule, SharedModule],
 })
 export class DemoModule {}
