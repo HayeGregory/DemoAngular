@@ -53,3 +53,7 @@ Binding event
 - lier un event JS à une methode dans ts : (click)="maMethode()" 
 
 ========================================================================
+Attribute Binding
+- desactiver un bouton via une condition & une methode changeant une valeur
+- entourer un attribut html par exemple de [] afin de l'associer a une condition(html) (boolean dans ts)
+========================================================================
