@@ -11,6 +11,7 @@ import { ExoRoutingModule } from './components/exo/exo-routing.module';
 import { FormsModule } from '@angular/forms';
 import { ToFahrenheitPipe } from './components/pipes/to-fahrenheit.pipe';
 import { TemperaturePipe } from './components/pipes/temperature.pipe';
+import { AfficherChronoPipe } from './components/pipes/afficher-chrono.pipe';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, AboutComponent, NavComponent],

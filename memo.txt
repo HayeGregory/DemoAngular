@@ -66,4 +66,23 @@ Pipe et custom pipes
 - creer un module shared : ng g m shared
     - specifier la declaration et l'export du pipe 
     - dans le module importer  le sharedModule
-    - attention si il peut detecter plusieurs modules et faire des imports auto sur app module alors qu'on veut l'utiliser dans demomodule
+    - attention il peut detecter plusieurs modules et faire des imports auto sur app module alors qu'on veut l'utiliser dans demomodule
+========================================================================
+Exercices chrono
+- separer la logique d'affichage de votre logique de composant :
+    - logique du composant chrono : 
+        gerer un setinterval pour avoir un nombre de secondaires
+        liaison avec le template html (bouton , bindings)
+    - et une logique d'affichage qui va transformer le nombre de 
+        seconde en minutes secondes grace au pipe
+
+- creer la partie html
+- binder les elements 
+ verifier si le compteur de seoncdes fonctionne binder
+- creation du pipe dans le dossier pipes
+- ne pas oublier de l'ajouter dans le shared module en tant qu'import et exports
+- une erreur peut survenir me disant que le pipe est declare a pl. endroits , 
+    verifier qu'il soit pas present dans l'app.module, si oui le retirer
+    car c'est notre exo.module qui utilisera notre pipe
+=========================================================================
+

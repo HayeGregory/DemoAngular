@@ -1,1 +1,12 @@
-<p>exo01 works!</p>
+<p>Exo 01 : Chronomètre</p>
+
+<p>Chrono : {{ chronoSecondes | afficherChrono }}</p>
+
+<input type="button" value="Start" (click)="StartChrono()" [disabled]="timer" />
+<input type="button" value="Stop" (click)="StopChrono()" [disabled]="!timer" />
+<input
+  type="button"
+  value="Reset"
+  (click)="ResetChrono()"
+  [disabled]="!chronoSecondes"
+/>
