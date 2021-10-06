@@ -1,0 +1,49 @@
+<h3>Directives structurelles : *ngIf *ngFor *ngSwitch</h3>
+
+<h4>NGIF</h4>
+<div (click)="toggle()">
+  <p style="cursor: pointer">Click ici</p>
+</div>
+<div *ngIf="isToggled">
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti eveniet
+    quibusdam accusamus, impedit suscipit aliquid, voluptatum incidunt
+    laboriosam porro doloribus ipsam aperiam sapiente magnam inventore assumenda
+    fugit perspiciatis, facilis omnis.
+  </p>
+</div>
+
+<hr />
+<h4>NGFOR</h4>
+
+<p>Variables locales : index, first, last, even, odd</p>
+
+<ul>
+  <li
+    *ngFor="
+      let item of personnes;
+      let i = index;
+      let pair = even;
+      let impair = odd;
+      let premier = first;
+      let dernier = last
+    "
+  >
+    <span [ngClass]="{ odd: impair, even: pair, first: premier, last: dernier }"
+      >{{ i }} - {{ item }}</span
+    >
+  </li>
+</ul>
+
+<hr />
+
+<h4>NGSWITCH</h4>
+
+<input [(ngModel)]="maVariable" />
+
+<div [ngSwitch]="maVariable">
+  <div *ngSwitchCase="1">Pomme</div>
+  <div *ngSwitchCase="2">Poire</div>
+  <div *ngSwitchCase="3">Peche</div>
+  <div *ngSwitchDefault>Entrez 1, 2 ou 3</div>
+</div>

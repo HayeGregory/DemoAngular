@@ -85,4 +85,9 @@ Exercices chrono
     verifier qu'il soit pas present dans l'app.module, si oui le retirer
     car c'est notre exo.module qui utilisera notre pipe
 =========================================================================
-
+Directives ngStyle ngClass
+--> voir demo 06
+=========================================================================
+Directives Structurelles ngIf ngForngSwitch
+--> voir demo 07
+=========================================================================

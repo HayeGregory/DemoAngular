@@ -1,0 +1,19 @@
+ul {
+  list-style: none;
+}
+span {
+  color: azure;
+  padding: 10px;
+  display: block;
+}
+.even {
+  background-color: green;
+}
+.odd {
+  background-color: red;
+}
+.first,
+.last {
+  background-color: darkgrey;
+  font-weight: bold;
+}
