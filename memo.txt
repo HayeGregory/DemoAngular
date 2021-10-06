@@ -91,3 +91,16 @@ Directives ngStyle ngClass
 Directives Structurelles ngIf ngForngSwitch
 --> voir demo 07
 =========================================================================
+Directive custom de survol
+--> prevoir un dossier pour les Directives
+--> creer la directive dans ce dossier avec :
+    ng g directive nomDirective
+--> implementer la directive
+    - la directive s'applique sur un element du dom , recuperable via elementRef
+        --> l'injecter dns le constructor de la directive
+        --> ensuite on a la possibilite d'appliquer un style comme par exemple :
+            el.nativeElement.style.backgroundColor
+    un survol implique d'ecouter des event mouseenter et mouseleave
+    - cela implique de creer deux methodes hostlistener( s'assurer de l'import)
+--> passer par le sharedModule et retirer l'import au niveau de l'app.module, relancer  ng s
+=========================================================================
