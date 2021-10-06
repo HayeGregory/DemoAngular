@@ -1,0 +1,46 @@
+<h3>Component Directives : ngStyle & ngClass</h3>
+
+<h4>ngStyle</h4>
+
+<p>Exemple 1 : trois boutons pour changer le style du paragraphe</p>
+
+<input type="button" value="Mettre en Bold" (click)="SwitchBold()" />
+<input type="button" value="Mettre en Italique" (click)="SwitchItalic()" />
+<input type="button" value="changer la taille" (click)="SwitchSize()" />
+
+<p appHighlight [ngStyle]="currentStyles">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias dolore
+  hic eaque inventore vitae?
+</p>
+<hr />
+
+<p>Exemple 2 : Changer la couleur de fond d'une div via un input</p>
+
+<label for="inputcolor1">entrez une autre couleur (anglais) :</label>
+<input type="text" name="inputcolor1" [(ngModel)]="color" />
+<!-- 
+    acceder a la propriete css grace a l'ecriture angular (tout - disparait et met en majuscule la lettre suivanante)
+    ou mettre entre '' le nom de la propriete css 
+    <div [ngStyle]="{width:'100px', height:'100px', 'background-color':color}"></div> 
+-->
+<div [ngStyle]="{ width: '100px', height: '100px', backgroundColor: color }">
+  test
+</div>
+
+<h4>ngClass</h4>
+
+<p>Exemple 1 : changer la classe css(definie dans le .css) du paragraphe</p>
+
+<input type="button" (click)="SwitchClass()" value="Appliquer classe" />
+<p [ngClass]="{ maClasse: class }">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, placeat illo
+  laudantium cumque.
+</p>
+<hr />
+
+<p>
+  Exemple 2 : grace a l'input de l'exmple2 ngStyle , si blue est rentré on
+  applique la classe .blueSquare
+</p>
+<div [ngClass]="{ blueSquare: color === 'blue' }">test blue</div>
+<div [ngClass]="{ redSquare: color === 'red' }">test red</div>
