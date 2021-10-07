@@ -104,3 +104,11 @@ Directive custom de survol
     - cela implique de creer deux methodes hostlistener( s'assurer de l'import)
 --> passer par le sharedModule et retirer l'import au niveau de l'app.module, relancer  ng s
 =========================================================================
+Exercices menu avec directive structurelles :
+--> prevoir une classe link (url, title, children visible) , ? pour rendre nullable la propriete
+--> dans le fichier nav.ts : prevoir une variable tableau de links
+    - initialiser votre tableau avec les liens du menu 
+    - prevoir une methode pour switcher un element du tableau de liens en visible ou pas (toggleVisible)
+--> dans le template , double boucle sur les li , utiliser l'index pour utiliser la methode toogleVisible
+=========================================================================
+

@@ -1,4 +1,6 @@
-<h4>Démos</h4>
+<!-- 
+ANCIEN MENU AVANT DIRECTIVE NGFOR
+  <h4>Démos</h4>
 <ul>
   <li>
     <a routerLink="demo/demo01">D01 - Binding oneWay</a>
@@ -36,5 +38,24 @@
   </li>
   <li>
     <a routerLink="exo/exo03">Exo 03</a>
+  </li>
+</ul> -->
+
+<!-- NOUVEAU MENU avec ngFor -->
+<ul>
+  <li *ngFor="let link of listeLink; let i = index">
+    <a
+      [routerLink]="link.url"
+      (click)="toggleVisible(i)"
+      [ngClass]="{ master: link.children }"
+    >
+      {{ link.title }}
+    </a>
+
+    <ul *ngIf="link.children && link.isVisible">
+      <li *ngFor="let subLink of link.children">
+        <a [routerLink]="subLink.url">{{ subLink.title }}</a>
+      </li>
+    </ul>
   </li>
 </ul>
