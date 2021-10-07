@@ -111,4 +111,29 @@ Exercices menu avec directive structurelles :
     - prevoir une methode pour switcher un element du tableau de liens en visible ou pas (toggleVisible)
 --> dans le template , double boucle sur les li , utiliser l'index pour utiliser la methode toogleVisible
 =========================================================================
+communication parent - enfant :
 
+creer les deux composant : 
+- parent(demo08)
+- enfant (declare dans le composant parent)
+- mettre le selecteur enfant dans le template parent (verifier si c'est ok)
+
+- @input :
+
+   - dans le ts enfant : prevoir une propriete @input
+   - dans le template html enfant : binding de cette variable
+   - dans le template parent : appeler le selecteur avec la variable input decleré dans l'enfant
+     --> <app-enfant nomVariableInput="..."> </app-enfant> 
+
+- @output :
+
+    - dans le ts enfant : 
+        - prevoir une propriete @output de type EventEmitter, l'initialiser
+        - prevoir un moyen d'emettre le type de message : event.emit .... (via methode ici)
+        - dans le template html parent : reagir a notre event (@output enfant) en l'associant avec une methode
+        - dans le ts du parent definir la methode qui est binder sur l'event
+
+- ng-content : 
+    - mettre les selector ng-content dans l' enfant à l'endroit souhaite
+    - dans le parent au sein du selecteur enfant , mettre ce qu'on a besoin
+      

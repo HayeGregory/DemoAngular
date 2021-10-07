@@ -1,0 +1,16 @@
+<h3>Communication parent enfant</h3>
+
+<h4>Composant parent</h4>
+
+<app-enfant
+  title="titre defini dans le parent"
+  (monEvent)="ReactToChildren($event)"
+>
+  <!-- ng-content a transmettre a l'enfant -->
+  <p class="ngcontent">ng content venant du parent</p>
+</app-enfant>
+
+<!-- recupere l'event de l'enfant -->
+<p>
+  Ma variable : <span class="enfant"> {{ maVar }}</span>
+</p>

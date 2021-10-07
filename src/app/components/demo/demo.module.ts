@@ -13,6 +13,8 @@ import { SharedModule } from '../shared/shared.module';
 import { Demo06Component } from './demo06/demo06.component';
 import { Demo07Component } from './demo07/demo07.component';
 import { Demo07bisComponent } from './demo07bis/demo07bis.component';
+import { Demo08Component } from './demo08/demo08.component';
+import { EnfantComponent } from './demo08/enfant/enfant.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { Demo07bisComponent } from './demo07bis/demo07bis.component';
     Demo06Component,
     Demo07Component,
     Demo07bisComponent,
+    Demo08Component,
+    EnfantComponent,
   ],
   imports: [CommonModule, DemoRoutingModule, FormsModule, SharedModule],
 })

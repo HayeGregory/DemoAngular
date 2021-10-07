@@ -1,0 +1,12 @@
+<div style="border: 1px black solid">
+  <!-- partie @input -->
+  <h3>Composant Enfant :</h3>
+  <h4 class="highlight">{{ title }}</h4>
+  <hr />
+  <!-- partie ngContent -->
+  <ng-content></ng-content>
+  <hr />
+  <!-- partie @output -->
+  <input type="button" value="salut..." (click)="methodeA()" /> &nbsp;
+  <input type="button" value="bonjour ..." (click)="methodeB()" />
+</div>
