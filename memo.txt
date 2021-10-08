@@ -136,4 +136,6 @@ creer les deux composant :
 - ng-content : 
     - mettre les selector ng-content dans l' enfant à l'endroit souhaite
     - dans le parent au sein du selecteur enfant , mettre ce qu'on a besoin
-      
+ ==============================================================================
+ correction shopping-list ==> exo02
+ ==============================================================================     
