@@ -13,6 +13,7 @@ import { ToFahrenheitPipe } from './components/pipes/to-fahrenheit.pipe';
 import { TemperaturePipe } from './components/pipes/temperature.pipe';
 import { AfficherChronoPipe } from './components/pipes/afficher-chrono.pipe';
 import { HighlightDirective } from './components/directives/highlight.directive';
+import { WordService } from './components/demo/demo09/service/word.service';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, AboutComponent, NavComponent],

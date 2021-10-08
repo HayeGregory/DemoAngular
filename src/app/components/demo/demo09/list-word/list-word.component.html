@@ -1,0 +1,9 @@
+<div style="background-color: rgb(90, 170, 114)">
+  <h4>Liste des mots (cliquer sur le mot pour supprimer) :</h4>
+  <p *ngIf="words.length === 0">-- vide --</p>
+  <ul *ngIf="words.length !== 0">
+    <li (click)="remove(idx)" *ngFor="let word of words; let idx = index">
+      {{ word }}
+    </li>
+  </ul>
+</div>

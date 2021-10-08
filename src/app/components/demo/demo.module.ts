@@ -15,6 +15,9 @@ import { Demo07Component } from './demo07/demo07.component';
 import { Demo07bisComponent } from './demo07bis/demo07bis.component';
 import { Demo08Component } from './demo08/demo08.component';
 import { EnfantComponent } from './demo08/enfant/enfant.component';
+import { Demo09Component } from './demo09/demo09.component';
+import { AddWordComponent } from './demo09/add-word/add-word.component';
+import { ListWordComponent } from './demo09/list-word/list-word.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { EnfantComponent } from './demo08/enfant/enfant.component';
     Demo07bisComponent,
     Demo08Component,
     EnfantComponent,
+    Demo09Component,
+    AddWordComponent,
+    ListWordComponent,
   ],
   imports: [CommonModule, DemoRoutingModule, FormsModule, SharedModule],
 })

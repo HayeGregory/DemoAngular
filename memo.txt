@@ -139,3 +139,43 @@ creer les deux composant :
  ==============================================================================
  correction shopping-list ==> exo02
  ==============================================================================     
+ demo09:  Service
+ but de la demo : 
+ un composant container avec 2 composant enfants et faire communiquer les deux enfants entre eux
+ - creer le composant enfant
+ - creer un composant add-word : qui devra ajouter un mot 
+ - creer un composant list-word : qui devra lister les mots rajoutés
+ - mettre ces deux composant dans le composant container (demo09)
+
+ - creer le service manuellement dans un dossier service 
+    -> le nommer : word.service.ts --> on constate qu'il est reconnu en service grace a l'icone jaune
+ - ajouter une propriete list de mots ( represente la source de donnee a partager aux composant)
+
+ - au sein des enfants pour injecter le service on passera par le constructor :
+    constructor(private wordService: WordService) {}
+ - on constate maintenant qu'on dispose via wordservice de la liste de mots
+ - on peut des lors dans l'enfant add-word mettre en place le mecanisme pour ajouter un mot 
+ - nous avons un probleme d'injection car nous n'avons pas specifié le provider
+  --> on peut le specifier sur app.module.ts dans le tableau providers
+      et sera disponible partout
+  --> on peut le specifier dans le .ts du composant au niveau du decorateur (selector, template, css)
+      en rajoutant la cle :   providers: [WordService]
+  --> specifiable au niveau du composant enfant 
+      mais ne sera donc pas disponible au niveau de l'autre enfant
+
+ - on peut maintenant ajouter des methodes dans notre service :
+    - addOne
+    - removeOne (index : number)
+    ....
+    ===> on pourra effectuer un crud sur la ressource qu'on aura ramene (api,...)
+
+ - on peut donc encapsuler la liste de mot en la passant en mode prive ( adapter le code )
+
+ On peut injecter un service dans un autre service :
+ - creer le service avec CLI : ng g service nomService (ici Log)
+ - implementer une methode log(message)
+ - l'injecter via le constructor
+ - dans la methode removeOne , utiliser notre logService pour afficher en console
+ - on constate un soucis d'injection --> se resoud en ajoutant le decorateur @injectable() 
+   sur le service : wordService
+========================================================================================
