@@ -1,1 +1,13 @@
-<p>exo02 works!</p>
+<h3>Liste de course</h3>
+
+<hr />
+
+<h4>Input pour ajouter cote parent</h4>
+
+<input type="text" [(ngModel)]="article" />
+<input type="button" value="Ajouter .." (click)="ajouterArticle()" />
+<hr />
+<app-list
+  [List_Enfant]="List_parent"
+  (eventDelete)="reactEventDelete($event)"
+></app-list>

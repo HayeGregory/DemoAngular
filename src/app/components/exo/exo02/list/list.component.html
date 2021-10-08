@@ -1,0 +1,20 @@
+<div style="background-color: rgb(77, 119, 173)">
+  <h3>Composant Enfant</h3>
+  <h4>Liste de l'enfant</h4>
+
+  <ul>
+    <li *ngFor="let item of List_Enfant; let idx = index">
+      <input
+        type="button"
+        value="Supprimer par l'enfant"
+        (click)="deleteItem(idx)"
+      />
+      {{ item }}
+      <input
+        type="button"
+        value="Suprrimer par le parent"
+        (click)="eventDeleteItem(idx)"
+      />
+    </li>
+  </ul>
+</div>
