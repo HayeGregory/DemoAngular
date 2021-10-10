@@ -1,0 +1,71 @@
+<h3>Formulaire : formGroup imbriqué & formArray</h3>
+
+<div>
+  <form (ngSubmit)="submit()" [formGroup]="formulaire">
+    <!-- formGroup : informations -->
+    <fieldset>
+      <legend>Informations (formGroup imbriqué)</legend>
+      <div formGroupName="informations">
+        <div>
+          <label>Nom</label>
+          <input formControlName="nom" type="text" />
+          <div
+            *ngIf="
+              formulaire.get('informations')?.get('nom')?.touched &&
+              formulaire.get('informations')?.get('nom')?.errors
+            "
+          >
+            <p
+              class="error"
+              *ngIf="
+                formulaire.get('informations')?.get('nom')?.errors?.required
+              "
+            >
+              le champs est requis !!!
+            </p>
+            <p class="error" *ngIf="nom?.errors?.errorFieldLength">
+              {{ nom?.errors?.errorFieldLength }}
+            </p>
+          </div>
+        </div>
+        <div>
+          <label>E-mail</label>
+          <input formControlName="email" type="email" />
+          <div *ngIf="email?.touched && email?.errors">
+            <p class="error" *ngIf="email?.errors?.required">
+              le champs est requis !!!
+            </p>
+            <p class="error" *ngIf="email?.errors?.email">
+              le format de l'email non valide !!!
+            </p>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Hobbies (formArray)</legend>
+      <button (click)="addHobby()">Ajouter un hobby...</button>
+      <div formArrayName="hobbies">
+        <div *ngIf="hobbies !== null && hobbies.get.length > 0">
+          <div
+            class="hobbiesList"
+            *ngFor="let hobby of hobbies.controls; let idx = index"
+          >
+            <input [formControlName]="idx" type="text" />
+            <button (click)="removeHobby(idx)">X</button>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <div>
+      <input type="button" value="Reset" (click)="reset()" />
+      <button [disabled]="!formulaire.valid">Valider</button>
+    </div>
+  </form>
+
+  <p>Status du formulaire : {{ formulaire.status }}</p>
+  <p>value : {{ nom?.value }} - {{ email?.value }}</p>
+  <p>reponse : {{ reponse }}</p>
+</div>

@@ -28,6 +28,10 @@ export class NavComponent implements OnInit {
           { url: '/demo/demo08', title: 'D08 - Input / output' },
           { url: '/demo/demo09', title: 'D09 - Service' },
           { url: '/demo/demo10', title: 'D10 - Formulaire' },
+          {
+            url: '/demo/demo10bis',
+            title: 'D10bis - Formulaire FormGroup imbriqué & formArray',
+          },
         ],
       },
       {

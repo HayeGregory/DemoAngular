@@ -231,3 +231,26 @@ demo10 : formulaire
     - ng-untouched : correspond à untouched
 
 =================================================================================
+Demo10bis :formGroup imbrique et formArray 
+
+formGroup imbrigué : on souhaite recuperer un objet information 
+avec des sous-objet infos nom et email 
+
+- dans le ts on declare un nouveau formGroup et on inclus nos control nom email dedans
+- modifier le html afin d'identifier le form-group avec cette fois ci formGroupName
+- il faut donc adapter les get nom et email car ils se trouvent un cran plus bas
+
+
+FormArray reprenant les hobbies :
+
+- dans le formulaire on ajoute une cle formArray initialiser a vide ([])
+- on pourra ensuite y ajouter nos control
+- dans le html lier notre formArray grace a formArrayName
+- prevoir l'affichage de nos hobbies avec un ngForngSwitch
+- il nous faut un getter pour recuperer les controls a afficher dans le ngFor
+    ==> attention caster en FormArray
+- ajouter un bouton associe a une methode addHobby (new control, avec son validator)
+- ajouter un bouton pour remove l'addHobby
+===================================================================================
+
+
