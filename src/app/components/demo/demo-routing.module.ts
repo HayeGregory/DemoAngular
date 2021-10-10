@@ -11,6 +11,7 @@ import { Demo07Component } from './demo07/demo07.component';
 import { Demo07bisComponent } from './demo07bis/demo07bis.component';
 import { Demo08Component } from './demo08/demo08.component';
 import { Demo09Component } from './demo09/demo09.component';
+import { Demo10Component } from './demo10/demo10.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,7 @@ const routes: Routes = [
       { path: 'demo07bis', component: Demo07bisComponent },
       { path: 'demo08', component: Demo08Component },
       { path: 'demo09', component: Demo09Component },
+      { path: 'demo10', component: Demo10Component },
     ],
   },
 ];

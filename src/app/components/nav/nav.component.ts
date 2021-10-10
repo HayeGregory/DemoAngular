@@ -27,6 +27,7 @@ export class NavComponent implements OnInit {
           { url: '/demo/demo07bis', title: 'D07bis - Directives Custom' },
           { url: '/demo/demo08', title: 'D08 - Input / output' },
           { url: '/demo/demo09', title: 'D09 - Service' },
+          { url: '/demo/demo10', title: 'D10 - Formulaire' },
         ],
       },
       {

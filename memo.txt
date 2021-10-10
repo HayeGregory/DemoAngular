@@ -179,3 +179,55 @@ creer les deux composant :
  - on constate un soucis d'injection --> se resoud en ajoutant le decorateur @injectable() 
    sur le service : wordService
 ========================================================================================
+demo10 : formulaire 
+
+- realiser le fomrulaire cote html souhaité
+- on utilise les reactiveForms donc on va importer ReactiveFormModule dans app.module 
+    ( ou le module / composant ou on souhaite l'utiliser)
+
+- reflechir aux elements qu'on veut afin de les declarer dans le ts
+    - declarer un formGroup ( represente notre formulaire)
+      initialiser en lui rajoutant nos input control ( nom, email, password )
+    - dans le html : lier notre form a notre formGroup ( [formGroup] )
+    - dans le html : lier chaque control a nos formcontrol ( formControlName )
+    - recuperer l'event : au leiu d'action --> (ngSubmit) ="submit()"
+
+
+- mettre en place la  soumission du formulaire et recuperation : 
+    - method submit(ts) qui sera relie a l'event ngSubmit(html)
+
+
+- partie validation formulaire  avec des validators 
+    - dans chaque formControl on peut sspecifier :
+        - soit un tableau de validation
+        - soit une methode qui se chargera de la validation
+    - dans le cas d'une methode ( custom )
+        - cette methode renverra null si pas d'erreur
+        - ou un objet { cle : value} representant l'erreur
+    - la validite du formGroup se fera via la propriete .valid
+
+- recuperer une erreur de validators
+    - avec ngif on peut decider d'afficher nos erreurs
+    - avec des propriete de l'api formulaire comme touched , invalid, valid ...
+      nous pouvons verifer differents scenarios
+      ici : si le formulaire a ete touche et presence d'errors :
+      --> formulaire.get('nom')?.touched && formulaire.get('nom')?.errors
+      en creeant des get dans le ts on peut alleger la syntaxe :
+      --> nom?.touched && nom?.errors
+    - on peut donc rendre indisponible le bouton valider 
+      en l'associant avec valid , pending (validator async ) , invalid ....
+      
+- pour connaitre le status du formulaire ou d'un control : formGroup.status
+    - valid, invalid, pending, disabled, enabled, pristine, dirty,touched, untouched
+    - ces valeurs aideront a definir les differents scenarios
+
+- cote style , des classe angular existe pour representer les etats du formulaire
+    - ng-valid : correspond à valid
+    - ng-invalid : correspond à invalid
+    - ng-pristine : correspond à pristine
+    - ng-pending : correspond à pending
+    - ng-dirty : correspond à dirty
+    - ng-touched : correspond à touched
+    - ng-untouched : correspond à untouched
+
+=================================================================================

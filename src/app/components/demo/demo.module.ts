@@ -6,7 +6,7 @@ import { DemoComponent } from './demo.component';
 import { Demo01Component } from './demo01/demo01.component';
 import { Demo02Component } from './demo02/demo02.component';
 import { Demo03Component } from './demo03/demo03.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Demo04Component } from './demo04/demo04.component';
 import { Demo05Component } from './demo05/demo05.component';
 import { SharedModule } from '../shared/shared.module';
@@ -18,6 +18,7 @@ import { EnfantComponent } from './demo08/enfant/enfant.component';
 import { Demo09Component } from './demo09/demo09.component';
 import { AddWordComponent } from './demo09/add-word/add-word.component';
 import { ListWordComponent } from './demo09/list-word/list-word.component';
+import { Demo10Component } from './demo10/demo10.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,14 @@ import { ListWordComponent } from './demo09/list-word/list-word.component';
     Demo09Component,
     AddWordComponent,
     ListWordComponent,
+    Demo10Component,
   ],
-  imports: [CommonModule, DemoRoutingModule, FormsModule, SharedModule],
+  imports: [
+    CommonModule,
+    DemoRoutingModule,
+    FormsModule,
+    SharedModule,
+    ReactiveFormsModule,
+  ],
 })
 export class DemoModule {}
