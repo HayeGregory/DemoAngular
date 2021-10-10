@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {
-  Form,
   FormArray,
+  FormBuilder,
   FormControl,
   FormGroup,
   Validators,
@@ -27,6 +27,15 @@ export class Demo10bisComponent implements OnInit {
     hobbies: new FormArray([]),
   });
 
+  // meme chose avec le formBuilder
+  // public formulaire: FormGroup = this.fb.group({
+  //   informations: this.fb.group([
+  //     { nom: ['', [Validators.required, CheckLength(2, 50)]] },
+  //     { email: ['mon@mail.com', [Validators.required, Validators.email]] },
+  //   ]),
+  //   hobbies: this.fb.array([]),
+  // });
+
   // getters
   get nom() {
     return this.formulaire.get('informations')?.get('nom');
@@ -39,7 +48,10 @@ export class Demo10bisComponent implements OnInit {
     // caster en FormArrays pour acceder aux controls
     return this.formulaire.get('hobbies') as FormArray;
   }
+
+  // injection formBuilder
   constructor() {}
+  //constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
     console.log(this.formulaire);
@@ -47,6 +59,7 @@ export class Demo10bisComponent implements OnInit {
 
   public addHobby() {
     this.hobbies.push(new FormControl('', [Validators.required]));
+    //this.hobbies.push(this.fb.control(['', [Validators.required]]));
   }
 
   public removeHobby(idx: number) {

@@ -20,6 +20,7 @@ import { AddWordComponent } from './demo09/add-word/add-word.component';
 import { ListWordComponent } from './demo09/list-word/list-word.component';
 import { Demo10Component } from './demo10/demo10.component';
 import { Demo10bisComponent } from './demo10bis/demo10bis.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
