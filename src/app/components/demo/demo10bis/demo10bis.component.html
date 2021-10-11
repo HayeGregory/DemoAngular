@@ -47,10 +47,10 @@
       <legend>Hobbies (formArray)</legend>
       <button (click)="addHobby()">Ajouter un hobby...</button>
       <div formArrayName="hobbies">
-        <div *ngIf="hobbies !== null && hobbies.get.length > 0">
+        <div *ngIf="hobbies !== null && hobbies().length > 0">
           <div
             class="hobbiesList"
-            *ngFor="let hobby of hobbies.controls; let idx = index"
+            *ngFor="let hobby of hobbies()?.controls; let idx = index"
           >
             <input [formControlName]="idx" type="text" />
             <button (click)="removeHobby(idx)">X</button>

@@ -31,13 +31,14 @@ export class Demo10bisComponent implements OnInit {
 
   // getters
   get nom() {
+    console.log('je mange du poulet');
     return this.formulaire.get('informations')?.get('nom');
   }
   get email() {
     return this.formulaire.get('informations')?.get('email');
   }
 
-  get hobbies() {
+  hobbies() {
     // caster en FormArrays pour acceder aux controls
     console.log('je mange du poulet');
     return this.formulaire.get('hobbies') as FormArray;
@@ -60,12 +61,14 @@ export class Demo10bisComponent implements OnInit {
   }
 
   public addHobby() {
-    this.hobbies.push(new FormControl('', [Validators.required]));
+    let hobby: FormArray = this.formulaire.get('hobbies') as FormArray;
+    hobby.push(new FormControl('', [Validators.required]));
     //this.hobbies.push(this.fb.control(['', [Validators.required]]));
   }
 
   public removeHobby(idx: number) {
-    this.hobbies.removeAt(idx);
+    let hobby: FormArray = this.formulaire.get('hobbies') as FormArray;
+    hobby.removeAt(idx);
   }
 
   reset(): void {
@@ -78,7 +81,7 @@ export class Demo10bisComponent implements OnInit {
     let hobbiesStr = '';
     this.reponse =
       this.nom?.value + ' avec son email : ' + this.email?.value + ' [ ';
-    this.hobbies.value.forEach((element: any) => {
+    this.hobbies().value.forEach((element: any) => {
       this.reponse += element + ' ';
     });
     this.reponse += ' ]';

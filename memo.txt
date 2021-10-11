@@ -263,4 +263,39 @@ Demo 12 routing
 - recuperer des params
     - creer un composant recupParam
     - rajouter dans le routing-module, l'url comprenant le param : 'recup/:param
-    
+
+===================================================================================
+ Demo 14 : Observable , storage :
+
+ Observable :
+ ==> but :  souscrire des abonnés au subject userConnected 
+            afin de savoir si il est bien connecté, enreg. en session
+
+ - creer un service Auth : ng g s Auth
+ - creer un model User
+ - declarer une liste de utilisateur
+ - declarer un subject<user>   
+ - ajouter une property private connectedUser
+ - creer la methode emitUser ( afin d'emmettre aux abonné les changements : null deconnecte | user)
+    --> grace a userSubject.next(this.connectedUser)
+ 
+ Coté observable (le souscriveur) - ici notre composant header
+ - ajouter une propriete connectedUser
+ - ajouter sur le html le connected
+ - injecter le service Auth
+ - dans le ngOnInit : souscrire au subject + lambda recuperant le user
+    a chaque changement de valeur du subjet on recupere donc la valeur (null | user)
+
+coté composant Auth
+- html : prevoir les input + bouton mthode click
+- ts : methode click --> appel metohde login de auth service(injecté)
+
+----------------------------------
+local storage , session storage 
+
+dans le service auth , au login on voudra stocker une information en session
+- soit dans le localstorage (clear  ou action de l'utilisateur pour clear )
+- soit en sessionstorage(se nettoie a la fermeture de l'onglet ou navigateur)
+
+
+=====================================================================================

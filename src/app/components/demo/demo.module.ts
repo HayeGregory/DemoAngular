@@ -23,6 +23,9 @@ import { Demo10bisComponent } from './demo10bis/demo10bis.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { Demo12Component } from './demo12/demo12.component';
 import { RecupParamComponent } from './demo12/recup-param/recup-param.component';
+import { Demo14Component } from './demo14/demo14.component';
+import { HeaderComponent } from './demo14/header/header.component';
+import { AuthComponent } from './demo14/auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +47,9 @@ import { RecupParamComponent } from './demo12/recup-param/recup-param.component'
     Demo10bisComponent,
     Demo12Component,
     RecupParamComponent,
+    Demo14Component,
+    HeaderComponent,
+    AuthComponent,
   ],
   imports: [
     CommonModule,
