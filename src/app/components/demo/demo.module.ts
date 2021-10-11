@@ -21,6 +21,8 @@ import { ListWordComponent } from './demo09/list-word/list-word.component';
 import { Demo10Component } from './demo10/demo10.component';
 import { Demo10bisComponent } from './demo10bis/demo10bis.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { Demo12Component } from './demo12/demo12.component';
+import { RecupParamComponent } from './demo12/recup-param/recup-param.component';
 
 @NgModule({
   declarations: [
@@ -40,12 +42,14 @@ import { BrowserModule } from '@angular/platform-browser';
     ListWordComponent,
     Demo10Component,
     Demo10bisComponent,
+    Demo12Component,
+    RecupParamComponent,
   ],
   imports: [
     CommonModule,
     DemoRoutingModule,
-    FormsModule,
     SharedModule,
+    FormsModule,
     ReactiveFormsModule,
   ],
 })

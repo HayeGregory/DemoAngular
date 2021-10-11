@@ -13,6 +13,8 @@ import { Demo08Component } from './demo08/demo08.component';
 import { Demo09Component } from './demo09/demo09.component';
 import { Demo10Component } from './demo10/demo10.component';
 import { Demo10bisComponent } from './demo10bis/demo10bis.component';
+import { Demo12Component } from './demo12/demo12.component';
+import { RecupParamComponent } from './demo12/recup-param/recup-param.component';
 
 const routes: Routes = [
   {
@@ -31,6 +33,8 @@ const routes: Routes = [
       { path: 'demo09', component: Demo09Component },
       { path: 'demo10', component: Demo10Component },
       { path: 'demo10bis', component: Demo10bisComponent },
+      { path: 'demo12', component: Demo12Component },
+      { path: 'recup/:param', component: RecupParamComponent },
     ],
   },
 ];

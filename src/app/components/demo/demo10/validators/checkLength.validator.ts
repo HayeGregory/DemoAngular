@@ -1,4 +1,3 @@
-import { NullTemplateVisitor } from '@angular/compiler';
 import { AbstractControl, ValidatorFn } from '@angular/forms';
 
 export function CheckLength(min: number, max: number): ValidatorFn {
@@ -9,7 +8,7 @@ export function CheckLength(min: number, max: number): ValidatorFn {
     if (valueOf == null) return null;
     if (valueOf.length < min || valueOf.length > max)
       return {
-        errorFieldLength: `Le chmaps doit être entre ${min} et ${max}`,
+        errorFieldLength: `Le champs doit être entre ${min} et ${max}`,
       };
 
     return null;

@@ -1,0 +1,14 @@
+<h3>Routing</h3>
+<h4>redirection programmatique</h4>
+
+<p (click)="redirectionRelative()">
+  cliquer sur le paragraphe pour aller vers la page about ( de maniere relative)
+</p>
+<p (click)="redirectionAbsolue()">
+  cliquer sur le paragraphe pour aller vers la page about ( de maniere absolue)
+</p>
+<hr />
+<h4>Recuperer un parametre :</h4>
+
+<p><input type="button" value="click ici" (click)="redirect()" /></p>
+<a [routerLink]="['../demo/recup/' + parameter]">Ou ici</a>

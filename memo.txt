@@ -252,5 +252,15 @@ FormArray reprenant les hobbies :
 - ajouter un bouton associe a une methode addHobby (new control, avec son validator)
 - ajouter un bouton pour remove l'addHobby
 ===================================================================================
+Demo11 : formBuilder ...
+===================================================================================
+Demo 12 routing
 
+- redirection programmatique
+    - soit relative :  this.router.navigate(['about']);
+    - soit absolue : this.router.navigateByUrl('/about');
 
+- recuperer des params
+    - creer un composant recupParam
+    - rajouter dans le routing-module, l'url comprenant le param : 'recup/:param
+    

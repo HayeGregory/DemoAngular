@@ -16,25 +16,18 @@ import { CheckLength } from '../demo10/validators/checkLength.validator';
 export class Demo10bisComponent implements OnInit {
   reponse: string = '...';
 
-  public formulaire: FormGroup = new FormGroup({
-    informations: new FormGroup({
-      nom: new FormControl('', [Validators.required, CheckLength(2, 50)]),
-      email: new FormControl('mon@mail.com', [
-        Validators.required,
-        Validators.email,
-      ]),
-    }),
-    hobbies: new FormArray([]),
-  });
-
-  // meme chose avec le formBuilder
-  // public formulaire: FormGroup = this.fb.group({
-  //   informations: this.fb.group([
-  //     { nom: ['', [Validators.required, CheckLength(2, 50)]] },
-  //     { email: ['mon@mail.com', [Validators.required, Validators.email]] },
-  //   ]),
-  //   hobbies: this.fb.array([]),
+  // public formulaire: FormGroup = new FormGroup({
+  //   informations: new FormGroup({
+  //     nom: new FormControl('', [Validators.required, CheckLength(2, 50)]),
+  //     email: new FormControl('mon@mail.com', [
+  //       Validators.required,
+  //       Validators.email,
+  //     ]),
+  //   }),
+  //   hobbies: new FormArray([]),
   // });
+
+  formulaire: FormGroup = new FormGroup({});
 
   // getters
   get nom() {
@@ -46,12 +39,21 @@ export class Demo10bisComponent implements OnInit {
 
   get hobbies() {
     // caster en FormArrays pour acceder aux controls
+    console.log('je mange du poulet');
     return this.formulaire.get('hobbies') as FormArray;
   }
 
   // injection formBuilder
-  constructor() {}
-  //constructor(private fb: FormBuilder) {}
+  //constructor() {}
+  constructor(private fb: FormBuilder) {
+    this.formulaire = this.fb.group({
+      informations: this.fb.group({
+        nom: ['', [Validators.required, CheckLength(2, 50)]],
+        email: ['mon@mail.com', [Validators.required, Validators.email]],
+      }),
+      hobbies: this.fb.array([]),
+    });
+  }
 
   ngOnInit(): void {
     console.log(this.formulaire);
