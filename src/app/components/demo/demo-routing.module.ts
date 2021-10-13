@@ -17,6 +17,7 @@ import { Demo12Component } from './demo12/demo12.component';
 import { RecupParamComponent } from './demo12/recup-param/recup-param.component';
 import { AuthComponent } from './demo14/auth/auth.component';
 import { Demo14Component } from './demo14/demo14.component';
+import { Demo15Component } from './demo15/demo15.component';
 
 const routes: Routes = [
   {
@@ -36,9 +37,10 @@ const routes: Routes = [
       { path: 'demo10', component: Demo10Component },
       { path: 'demo10bis', component: Demo10bisComponent },
       { path: 'demo12', component: Demo12Component },
-      { path: 'recup/:param', component: RecupParamComponent },
+      { path: 'recup/:param/:param2', component: RecupParamComponent },
       { path: 'demo14', component: Demo14Component },
       { path: 'login', component: AuthComponent },
+      { path: 'demo15', component: Demo15Component },
     ],
   },
 ];

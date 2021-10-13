@@ -1,0 +1,28 @@
+<div class="navigation">
+  <input
+    [disabled]="!pokedex?.previous"
+    (click)="clickPrevious()"
+    type="button"
+    value="previous"
+  />
+  <input
+    [disabled]="!pokedex?.next"
+    (click)="clickNext()"
+    type="button"
+    value="next"
+  />
+</div>
+<div class="content">
+  <div class="list" *ngIf="pokedex" status="success">
+    <ul>
+      <li *ngFor="let p of pokedex.results">
+        <a style="cursor: pointer" (click)="onClick(p.url)">{{
+          p.name | titlecase
+        }}</a>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <app-pokedetail [url]="toUrl"></app-pokedetail>
+  </div>
+</div>

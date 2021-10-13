@@ -1,0 +1,10 @@
+<div status="info" *ngIf="pokemon">
+  <h2>{{ pokemon.name | uppercase }} | Poids : {{ pokemon.weight }}</h2>
+  <img
+    [src]="pokemon.sprites.other['official-artwork'].front_default"
+    height="300"
+  />
+  <br />
+  <img [src]="pokemon.sprites.back_default" height="150" />
+  <img [src]="pokemon.sprites.front_default" height="150" />
+</div>

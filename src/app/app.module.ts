@@ -9,6 +9,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { DemoRoutingModule } from './components/demo/demo-routing.module';
 import { ExoRoutingModule } from './components/exo/exo-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, AboutComponent, NavComponent],
@@ -19,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ExoRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

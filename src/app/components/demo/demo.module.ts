@@ -20,12 +20,14 @@ import { AddWordComponent } from './demo09/add-word/add-word.component';
 import { ListWordComponent } from './demo09/list-word/list-word.component';
 import { Demo10Component } from './demo10/demo10.component';
 import { Demo10bisComponent } from './demo10bis/demo10bis.component';
-import { BrowserModule } from '@angular/platform-browser';
 import { Demo12Component } from './demo12/demo12.component';
 import { RecupParamComponent } from './demo12/recup-param/recup-param.component';
 import { Demo14Component } from './demo14/demo14.component';
 import { HeaderComponent } from './demo14/header/header.component';
 import { AuthComponent } from './demo14/auth/auth.component';
+import { Demo15Component } from './demo15/demo15.component';
+import { PokelistComponent } from './demo15/pokelist/pokelist.component';
+import { PokedetailComponent } from './demo15/pokedetail/pokedetail.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,9 @@ import { AuthComponent } from './demo14/auth/auth.component';
     Demo14Component,
     HeaderComponent,
     AuthComponent,
+    Demo15Component,
+    PokelistComponent,
+    PokedetailComponent,
   ],
   imports: [
     CommonModule,

@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class Demo12Component implements OnInit {
   parameter: number = 42;
+  param2: string = 'harman';
 
   constructor(private router: Router) {}
 
@@ -20,6 +21,6 @@ export class Demo12Component implements OnInit {
     this.router.navigateByUrl('/about');
   }
   redirect() {
-    this.router.navigate(['demo/recup/' + this.parameter]);
+    this.router.navigate(['demo/recup/' + this.parameter + '/' + this.param2]);
   }
 }

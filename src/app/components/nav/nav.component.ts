@@ -33,7 +33,8 @@ export class NavComponent implements OnInit {
             title: 'D10bis - Formulaire FormGroup imbriqué & formArray',
           },
           { url: '/demo/demo12', title: 'D12 - Routing' },
-          { url: '/demo/demo14', title: 'D14 - Observable storage http' },
+          { url: '/demo/demo14', title: 'D14 - Observable storage' },
+          { url: '/demo/demo15', title: 'D15 - Http - pokedex api' },
         ],
       },
       {

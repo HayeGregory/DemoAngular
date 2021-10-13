@@ -299,3 +299,56 @@ dans le service auth , au login on voudra stocker une information en session
 
 
 =====================================================================================
+demo Api Pokedex 
+- analyser l'api que vous voulez utiliser , ici https://pokeapi.co/api/v2/pokemon/
+- extraire les interfaces par rapport a ce qu'on veut exploiter 
+    ==> dossier models , placer les interfaces dans un fichier pokemon.models.ts
+- un outil en ligne existe  pour transformer un resultat json en une interface TypeScript 
+    ==> http://json2ts.com/
+
+
+- mettre en place la structure comme on le souhaite , dans notre cas : 
+    - un composant pokelist ou on listera les pokemon
+    - un composant pokedetail pour afficher un pokemon
+    - mettre en place la structure minimal html css de ce qu'on veut et verifier dans le navigateur
+- creation du service poke.service.ts --> ng g s poke
+
+
+- injecter la classe HttpClient, verifier son import
+    --> pour pouvoir utiliser la classe, il faut importer HttpClientModule dans le app.module.ts
+    --> dans app.module.ts, si l'import ne se fait pas automatiquement : le faire manuellement en ajoutant l'import :
+        import { HttpClientModule } from '@angular/common/http';
+- Dans notre service on va ajouter deux fonctionnalite : 
+    - getAll (url) : Observable<Pokedex>
+    - getOne (url) : Observable<Pokemon>
+    ==> ces deux methodes renvoie un Observable, on pourra donc s'abonner dessus (voir plus loin)
+
+
+- Dans le composant List : 
+    - dans le ts :
+        - creer un methode qui va loader les items
+        - injecter le service pokeService
+        - ajouter une propriete pokedex
+        - appeler getAll et y souscrire en specifiant ce qu'on fera avec ce qu'on va recuperer
+        - on fait donc ici une liaison pour recuperer pokedexFromService 
+          et mettre le resultat dans pokedex
+        - prevoir les methode previous et next , qui feront appel a loadItems avec l'url previous ou next
+        - prevoir une methode pour mettre a jour toUrl ( servira pour atteindre le pokemon dont on veut le detail)
+    - faire le necessaire dans le html pour afficher les data, lier les boutons au methodes etc etc..
+    - verifier qu'on recupere bien les donnees, bouton previous et next
+
+- Dans notre composant detail 
+    - dans le ts :
+        - injecter le service pokeService
+        - ajouter une propriete pokemon
+        - prevoir un @input qui va recuperer du parent ( pokelist) l'url 
+        - et ici on pourra appeler le service getOne et transmettre la valeur recuperee dans pokemon
+    - faire le necessaire dans le html pour afficher les data, lier les boutons au methodes, bind attribut [Src] etc etc..
+    - verifier que le click sur un pokemon affiche bien le detail
+
+- erreur rencontree :
+    - dans le json une propriete avec un - ne pourra pas etre accessible en tant que propriete,
+    il faudra y acceder comme ceci : 
+        [src]="pokemon.sprites.other['official-artwork'].front_default"
+
+=========================================================================================
